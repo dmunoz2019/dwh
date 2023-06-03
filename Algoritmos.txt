@@ -1,0 +1,34 @@
+Tenemos la siguientes tablas que tendremos que tranformar la data de 
+procedimiento limpiar_datos():
+    // Borrar la columna NameStyle de DimCostumer
+    eliminar_columna(DimCostumer, "NameStyle")
+    
+    // Borrar las columnas SpanishCountryRegionName y FrenchCountryRegionName de DimGeography
+    eliminar_columna(DimGeography, "SpanishCountryRegionName")
+    eliminar_columna(DimGeography, "FrenchCountryRegionName")
+    
+    // Borrar las columnas FrenchProductName y FinishedGoodsFlag de DimProduct
+    eliminar_columna(DimProduct, "FrenchProductName")
+    eliminar_columna(DimProduct, "FinishedGoodsFlag")
+    
+    // Borrar las columnas FrenchProductCategoryName y ProductCategoryAlternateKey de DimProductCategory
+    eliminar_columna(DimProductCategory, "FrenchProductCategoryName")
+    eliminar_columna(DimProductCategory, "ProductCategoryAlternateKey")
+    
+    // Borrar la columna ProductSubcategoryAlternateKey de DimProductSubCategory
+    eliminar_columna(DimProductSubCategory, "ProductSubcategoryAlternateKey")
+    
+    // Borrar la columna FrenchPromotionName de DimPromotion
+    eliminar_columna(DimPromotion, "FrenchPromotionName")
+    
+fin procedimiento
+
+función eliminar_columna(tabla, columna):
+    si columna existe en tabla entonces
+        eliminar columna de tabla
+    fin si
+fin función
+
+FactSales
+	
+
